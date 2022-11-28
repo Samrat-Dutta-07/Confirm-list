@@ -1,0 +1,116 @@
+<html>
+
+<head>
+
+<title>RT Network Solutions pvt ltd</title>
+
+<style>
+   
+h1{
+text-align: center;
+color: rgb(249, 247, 247);
+font-size: 30px;
+background-color:rgb(108, 96, 180);
+}
+input[type=text]{
+  margin-left: 40px;
+  border-radius: 8px; 
+  border: 2px solid black;   
+}
+input[type=button]{
+    background-color: rgba(33, 81, 113, 0.404);  
+    color: rgb(253, 251, 251);
+    font-size: 18px;
+    border-radius: 9px; 
+    border: 2px solid black;
+    margin-left: 90px;
+    width: 80;
+    height: 30;
+}
+input[type=button]:hover{
+    background-color: blue;
+    color: rgb(122, 190, 185);
+    cursor: pointer;
+}
+div{
+ width: 250px;
+ padding: 20px;
+ background-color:rgb(92, 133, 138); 
+ margin: auto; 
+ border-radius: 7px;
+ border: 2px solid rgb(254, 254, 254)
+}
+h2{
+  
+text-align: center;
+font-size: 30px;
+background-color:rgb(182, 222, 89);
+color: rgb(239, 70, 121);
+}
+
+</style>
+
+
+</head>
+
+<body onload="get()" bgcolor=#81C8C1>
+ 
+
+  
+<h1><b>Welcome<b></h1>
+  <div>
+<b><label>Name</label></b>
+<input type="text" id="input"/ placeholder="Enter Name.."><br><br>
+
+
+<b><label>User ID</label></b>
+<input type="text"  id="input1"/ placeholder="Enter Name.."><br><br>
+
+<input type="button" value='Submit' value='add' onclick="AddRow()"/><BR><BR>
+  
+</div>
+<h2><u><b>Confirm List</b></u></h2>
+
+<table border="1" width="60%" id = "show">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>User ID</th>
+    </tr>
+  </thead>
+</table>
+
+<script>
+  var list1=[];
+  var list2=[];
+
+  var n = 1;
+  var x = 0;
+
+  function AddRow(){
+    var AddRow = document.getElementById('show');
+    var NewRow = AddRow.insertRow(n);
+
+    list1[x] = document.getElementById("input").value;
+    list2[x] = document.getElementById("input1").value;
+
+    var cel1 = NewRow.insertCell(0);
+    var cel2 = NewRow.insertCell(1);
+
+    cel1.innerHTML = list1[x];
+    cel2.innerHTML = list2[x];
+
+    n++;
+    x++;
+  }
+
+
+
+</script>
+
+
+
+
+
+ </body>
+</html>
